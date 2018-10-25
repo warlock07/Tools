@@ -1,0 +1,15 @@
++public bool isShow = false;
+
+void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ShowUI(!isShow);
+        }
+    }
+
+public void ShowUI(bool val)
+    {
+        body.SetActive(val);
+        isShow = val;
+    }
