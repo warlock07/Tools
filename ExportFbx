@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ExportFbx : MonoBehaviour {
+
+	public GameObject meshObject;
+	private string fbxname = "fbx";
+
+	// Use this for initialization
+	void Start()
+	{
+		GameObject[] meshObjs = new GameObject[1];
+		meshObjs[0] = meshObject;
+		//用到动态库WRP_FBXExporter
+		FBXExporter.ExportFBX("", fbxname, meshObjs, true);
+	}
+
+
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
